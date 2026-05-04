@@ -1,80 +1,47 @@
 # 🚗 Kinematic Bicycle Model Simulation
 
-## 📌 Overview
-This project implements a **kinematic bicycle model** to simulate and analyze vehicle motion under different steering and velocity inputs.
+## Overview
+This project simulates a vehicle using a kinematic bicycle model and analyzes how different steering inputs affect its motion.
 
-The objective is to understand how control inputs influence trajectory generation through a series of experiments, including circular motion, square paths, and figure-eight trajectories.
-
----
-
-## 🎯 Objectives
-- Model vehicle motion using a simplified kinematic approach  
-- Explore the effect of steering and velocity on trajectories  
-- Simulate different control strategies  
-- Visualize motion in 2D space  
+The script generates multiple trajectories by applying different control strategies, allowing visualization and understanding of vehicle behavior under various conditions.
 
 ---
 
-## ⚙️ Model Description
-The kinematic bicycle model approximates a vehicle using a single front and rear wheel.
-
-### State Variables
-- `xc, yc` → vehicle position  
-- `theta` → heading angle  
-- `delta` → steering angle  
-- `beta` → slip angle  
-
-### Parameters
-- `L` → wheelbase  
-- `lr` → rear axle distance  
-- `w_max` → maximum steering rate  
-- `sample_time` → simulation step  
+## Features
+- Simulation of vehicle motion using a kinematic bicycle model  
+- Generation of different trajectories (circular, square, figure-eight)  
+- Adjustable steering and velocity inputs  
+- Visualization of vehicle paths in 2D space  
+- Exploration of control strategies and their impact on motion  
 
 ---
 
-## 🔄 Simulation Logic
-At each time step:
-1. Update steering angle using angular velocity (`w`)
-2. Compute slip angle (`beta`)
-3. Update position and orientation using kinematic equations  
-
-This iterative process generates the vehicle trajectory over time.
-
----
-
-## 🧪 Experiments
-
-### 1. Circular Motion
-- Constant steering angle  
-- Produces a circular trajectory  
-
-### 2. Steering to Target Angle
-- Steering increases until a desired value  
-- Demonstrates controlled turning  
-
-### 3. Square Path
-- Steering applied at specific intervals  
-- Produces sharp turns and straight segments  
-
-### 4. Figure-Eight Trajectory
-- Alternating steering direction  
-- Generates a continuous figure-eight path  
+## Parameters Used
+- Wheelbase (L): 2  
+- Rear axle distance (lr): 1.2  
+- Maximum steering rate (w_max): 1.22  
+- Sampling time: 0.01 s  
+- Simulation time: 20–60 s (depending on experiment)  
+- Velocity: constant or controlled (e.g., 4 m/s)  
 
 ---
 
-## 📊 Visualization
-Trajectories are plotted using `matplotlib` with equal axis scaling to preserve geometry.
+## Output Graphs
+The program produces:
+
+1. Vehicle trajectory plots for different motion scenarios  
+2. Circular motion path under constant steering  
+3. Square path using discrete steering inputs  
+4. Figure-eight trajectory with alternating steering  
 
 ---
 
-## 🛠️ Technologies
-- Python  
-- NumPy  
-- Matplotlib  
+## Purpose
+The purpose of this project is to demonstrate how steering and velocity inputs influence vehicle motion using a simplified kinematic model.
+
+It also highlights how different control strategies can generate complex trajectories from simple rules.
 
 ---
 
-## ▶️ How to Run
-```bash
-pip install numpy matplotlib
-python main.py
+## Author
+Salar AP
